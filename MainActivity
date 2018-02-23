@@ -1,0 +1,46 @@
+package uk.ac.napier.orianebd.happymood;
+
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.Toast;
+import android.content.Intent;
+import android.view.View;
+
+
+public class MainActivity extends ActionBarActivity {
+
+    private static int zero = 0;
+    private static String Name = "Empty";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button btnStart = (Button)findViewById(R.id.button);
+        btnStart.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent activity2 =  new Intent(MainActivity.this,MainActivity2Activity.class);
+                startActivity(activity2);
+            }
+        });
+
+        Button btnNew = (Button)findViewById(R.id.button2);
+        btnNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //TAG
+                String text = "Data erased.";
+                Toast.makeText(getBaseContext(), text, Toast.LENGTH_SHORT).show();
+
+                //Initialization Data
+
+            }
+        });
+    }
+
+
+}
