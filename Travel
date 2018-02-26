@@ -4,22 +4,49 @@ package uk.ac.napier.orianebd.happymood;
  * Created by 40332138
  * Act following the taste of the customer by displaying a nice picture of a nice place in the world.
  */
+
 public class Travel extends MainActivity3Activity{
 
     public void displayPicture(String choice){
+        
         switch (choice){
             case "beach" :
-
+                do{
+                    ImageView beach = new ImageView(this);
+                    beach.setImageResource(R.drawable.beach);
+                    
+                    TextView textElement = (TextView) findViewById(R.id.this_is_id_name);
+                    textElement.setText("Do you feel this warm wind ? Oh and it's not the the waves wich touch your toes ? Have a break, your mind are under the tropics");
+                }while(button_next pas appuyé);
                 break;
             case "mountain" :
-
+                do{
+                    ImageView mountain = new ImageView(this);
+                     mountain.setImageResource(R.drawable.mountain);
+                     
+                     extView textElement = (TextView) findViewById(R.id.this_is_id_name);
+                    textElement.setText("Pure air, lonelyness in the wild nature ! Nobody to disturb you, or maybe a small groundhog...");
+                }while(button_next pas appuyé);
                 break;
             case "home" :
-
-                break;
+                do{
+                    ImageView home = new ImageView(this);
+                    home.setImageResource(R.drawable.home);
+                    
+                    extView textElement = (TextView) findViewById(R.id.this_is_id_name);
+                    textElement.setText("It's not the smell of a hot chocolate ? Perfect to appreciate some home made cookies with the noise of the fire in the background.");
+                 }while(button_next pas appuyé);
+                 break;
             case "campaign" :
-
+                do{
+                    ImageView campaign = new ImageView(this);
+                    campaign.setImageResource(R.drawable.campaign);
+                    
+                    extView textElement = (TextView) findViewById(R.id.this_is_id_name);
+                    textElement.setText("Simplest things are the better ! Daisises in the meadows, a walk through the wood ! And oh, it's the mushrooms season ! Get some for the lunch. ");
+                }while(button_next pas appuyé);
                 break;
         }
+        
     }
 }
