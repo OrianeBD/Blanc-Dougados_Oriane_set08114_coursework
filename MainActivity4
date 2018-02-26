@@ -1,0 +1,43 @@
+package uk.ac.napier.orianebd.happymood;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+
+public class MainActivity4Activity extends ActionBarActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main_activity4);
+
+        Button click = (Button) findViewById(R.id.button6);
+        click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "https://www.youtube.com/watch?v=wfWIs2gFTAM";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
+
+
+        Button next = (Button) findViewById(R.id.button4);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+             public void onClick(View view) {
+                Intent activity5 = new Intent(MainActivity4Activity.this, MainActivity5Activity.class);
+                startActivity(activity5);
+             }
+        });
+    }
+
+
+
+}
