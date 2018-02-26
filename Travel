@@ -1,0 +1,25 @@
+package uk.ac.napier.orianebd.happymood;
+
+/**
+ * Created by 40332138
+ * Act following the taste of the customer by displaying a nice picture of a nice place in the world.
+ */
+public class Travel extends MainActivity3Activity{
+
+    public void displayPicture(String choice){
+        switch (choice){
+            case "beach" :
+
+                break;
+            case "mountain" :
+
+                break;
+            case "home" :
+
+                break;
+            case "campaign" :
+
+                break;
+        }
+    }
+}
