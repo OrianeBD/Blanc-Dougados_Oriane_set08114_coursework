@@ -1,5 +1,7 @@
 package uk.ac.napier.orianebd.happymood;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -10,8 +12,6 @@ import android.view.View;
 
 public class MainActivity extends ActionBarActivity {
 
-    private static int zero = 0;
-    private static String Name = "Empty";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +19,18 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         Button btnStart = (Button)findViewById(R.id.button);
-        btnStart.setOnClickListener(new View.OnClickListener(){
+        btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
-                Intent activity2 =  new Intent(MainActivity.this,MainActivity2Activity.class);
-                startActivity(activity2);
+            public void onClick(View view) {
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                if (prefs.contains("travel")) {
+                    Intent activity3 = new Intent(MainActivity.this, MainActivity3Activity.class);
+                    startActivity(activity3);
+                } else {
+                    Intent activity2 = new Intent(MainActivity.this, MainActivity2Activity.class);
+                    startActivity(activity2);
+                }
+
             }
         });
 
@@ -37,6 +44,11 @@ public class MainActivity extends ActionBarActivity {
                 Toast.makeText(getBaseContext(), text, Toast.LENGTH_SHORT).show();
 
                 //Initialization Data
+                SharedPreferences PREFS = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                PREFS.edit().clear().commit();
+
+
+
 
             }
         });
