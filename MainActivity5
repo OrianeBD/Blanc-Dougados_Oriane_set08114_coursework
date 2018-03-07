@@ -1,7 +1,9 @@
 package uk.ac.napier.orianebd.happymood;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.Button;
 
 public class MainActivity5Activity extends ActionBarActivity {
 
+    String choice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,10 +22,37 @@ public class MainActivity5Activity extends ActionBarActivity {
         reciepe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "https://www.saveur.com/article/Recipes/Pear-Tarte-Tatin";
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
+
+                SharedPreferences PREFS = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                choice = PREFS.getString("food", "Chinese");
+                switch (choice) {
+                    case "Chinese":
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        String url = getResources().getString(R.string.chinese_reciepe);
+                        i.setData(Uri.parse(url));
+                        startActivity(i);
+                        break;
+                    case "French":
+                        Intent j = new Intent(Intent.ACTION_VIEW);
+                        String url2 = getResources().getString(R.string.french_reciepe);
+                        j.setData(Uri.parse(url2));
+                        startActivity(j);
+                        break;
+                    case "Italian":
+                        Intent k = new Intent(Intent.ACTION_VIEW);
+                        String url3 = getResources().getString(R.string.italian_reciepe);
+                        k.setData(Uri.parse(url3));
+                        startActivity(k);
+                        break;
+                    case "American":
+                        Intent l = new Intent(Intent.ACTION_VIEW);
+                        String url4 = getResources().getString(R.string.american_reciepe);
+                        l.setData(Uri.parse(url4));
+                        startActivity(l);
+                        break;
+
+                }
+
             }
         });
 
@@ -30,7 +60,7 @@ public class MainActivity5Activity extends ActionBarActivity {
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent activity = new Intent(MainActivity5Activity.this, MainActivity2Activity.class);
+                Intent activity = new Intent(MainActivity5Activity.this, MainActivity.class);
                 startActivity(activity);
             }
         });
