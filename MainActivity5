@@ -9,9 +9,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Random;
+
 
 public class MainActivity5Activity extends ActionBarActivity {
 
+    private static int minRandom = 1;
+    private static int maxRandom = 4;
     String choice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,28 +31,131 @@ public class MainActivity5Activity extends ActionBarActivity {
                 choice = PREFS.getString("food", "Chinese");
                 switch (choice) {
                     case "Chinese":
-                        Intent i = new Intent(Intent.ACTION_VIEW);
-                        String url = getResources().getString(R.string.chinese_reciepe);
-                        i.setData(Uri.parse(url));
-                        startActivity(i);
+                        Random r = new Random();
+                        int value = minRandom + r.nextInt(maxRandom - minRandom);
+                        switch (value) {
+                            case 1:
+                                Intent i = new Intent(Intent.ACTION_VIEW);
+                                String url = getResources().getString(R.string.chinese_reciepe);
+                                i.setData(Uri.parse(url));
+                                startActivity(i);
+                                break;
+                            case 2:
+                                Intent i2 = new Intent(Intent.ACTION_VIEW);
+                                String url2 = getResources().getString(R.string.chinese_reciepe2);
+                                i2.setData(Uri.parse(url2));
+                                startActivity(i2);
+                                break;
+                            case 3:
+                                Intent i3 = new Intent(Intent.ACTION_VIEW);
+                                String url3 = getResources().getString(R.string.chinese_reciepe3);
+                                i3.setData(Uri.parse(url3));
+                                startActivity(i3);
+                                break;
+                            case 4:
+                                Intent i4 = new Intent(Intent.ACTION_VIEW);
+                                String url4 = getResources().getString(R.string.chinese_reciepe4);
+                                i4.setData(Uri.parse(url4));
+                                startActivity(i4);
+                                break;
+                        }
                         break;
+
                     case "French":
-                        Intent j = new Intent(Intent.ACTION_VIEW);
-                        String url2 = getResources().getString(R.string.french_reciepe);
-                        j.setData(Uri.parse(url2));
-                        startActivity(j);
+
+                        Random r2 = new Random();
+                        int value2 = minRandom + r2.nextInt(maxRandom - minRandom);
+                        switch (value2) {
+                            case 1:
+                                Intent i = new Intent(Intent.ACTION_VIEW);
+                                String url = getResources().getString(R.string.french_reciepe);
+                                i.setData(Uri.parse(url));
+                                startActivity(i);
+                                break;
+                            case 2:
+                                Intent i2 = new Intent(Intent.ACTION_VIEW);
+                                String url2 = getResources().getString(R.string.french_reciepe2);
+                                i2.setData(Uri.parse(url2));
+                                startActivity(i2);
+                                break;
+                            case 3:
+                                Intent i3 = new Intent(Intent.ACTION_VIEW);
+                                String url3 = getResources().getString(R.string.french_reciepe3);
+                                i3.setData(Uri.parse(url3));
+                                startActivity(i3);
+                                break;
+                            case 4:
+                                Intent i4 = new Intent(Intent.ACTION_VIEW);
+                                String url4 = getResources().getString(R.string.french_reciepe4);
+                                i4.setData(Uri.parse(url4));
+                                startActivity(i4);
+                                break;
+                        }
+
                         break;
+
                     case "Italian":
-                        Intent k = new Intent(Intent.ACTION_VIEW);
-                        String url3 = getResources().getString(R.string.italian_reciepe);
-                        k.setData(Uri.parse(url3));
-                        startActivity(k);
+                        Random r3 = new Random();
+                        int value3 = minRandom + r3.nextInt(maxRandom - minRandom);
+                        switch (value3) {
+                            case 1:
+                                Intent i = new Intent(Intent.ACTION_VIEW);
+                                String url = getResources().getString(R.string.italian_reciepe);
+                                i.setData(Uri.parse(url));
+                                startActivity(i);
+                                break;
+                            case 2:
+                                Intent i2 = new Intent(Intent.ACTION_VIEW);
+                                String url2 = getResources().getString(R.string.italian_reciepe2);
+                                i2.setData(Uri.parse(url2));
+                                startActivity(i2);
+                                break;
+                            case 3:
+                                Intent i3 = new Intent(Intent.ACTION_VIEW);
+                                String url3 = getResources().getString(R.string.italian_reciepe3);
+                                i3.setData(Uri.parse(url3));
+                                startActivity(i3);
+                                break;
+                            case 4:
+                                Intent i4 = new Intent(Intent.ACTION_VIEW);
+                                String url4 = getResources().getString(R.string.italian_reciepe4);
+                                i4.setData(Uri.parse(url4));
+                                startActivity(i4);
+                                break;
+                        }
+
                         break;
+
                     case "American":
-                        Intent l = new Intent(Intent.ACTION_VIEW);
-                        String url4 = getResources().getString(R.string.american_reciepe);
-                        l.setData(Uri.parse(url4));
-                        startActivity(l);
+                        Random r4 = new Random();
+                        int value4 = minRandom + r4.nextInt(maxRandom - minRandom);
+                        switch (value4) {
+                            case 1:
+                                Intent i = new Intent(Intent.ACTION_VIEW);
+                                String url = getResources().getString(R.string.american_reciepe);
+                                i.setData(Uri.parse(url));
+                                startActivity(i);
+                                break;
+                            case 2:
+                                Intent i2 = new Intent(Intent.ACTION_VIEW);
+                                String url2 = getResources().getString(R.string.american_reciepe2);
+                                i2.setData(Uri.parse(url2));
+                                startActivity(i2);
+                                break;
+                            case 3:
+                                Intent i3 = new Intent(Intent.ACTION_VIEW);
+                                String url3 = getResources().getString(R.string.american_reciepe3);
+                                i3.setData(Uri.parse(url3));
+                                startActivity(i3);
+                                break;
+                            case 4:
+                                Intent i4 = new Intent(Intent.ACTION_VIEW);
+                                String url4 = getResources().getString(R.string.american_reciepe4);
+                                i4.setData(Uri.parse(url4));
+                                startActivity(i4);
+                                break;
+                        }
+
                         break;
 
                 }
