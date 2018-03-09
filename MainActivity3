@@ -9,12 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+import java.util.Random;
 
 
 public class MainActivity3Activity extends ActionBarActivity {
 
-
+    private static int minRandom = 1;
+    private static int maxRandom = 4;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,21 +42,49 @@ public class MainActivity3Activity extends ActionBarActivity {
 
         switch (choice){
             case "Beach" :
-                ImageView beach = (ImageView) findViewById(R.id.picture);
-                beach.setImageResource(R.drawable.beach);
+                Random r = new Random();
+                int value = minRandom+r.nextInt(maxRandom - minRandom);
+                switch (value){
+                    case 1:
+                        ImageView beach = (ImageView) findViewById(R.id.picture);
+                        beach.setImageResource(R.drawable.beach);
 
-                TextView textElement = (TextView) findViewById(R.id.textView5);
-                textElement.setText("Do you feel this warm wind ? Oh and it's not the the waves wich touch your toes ? Have a break, your mind are under the tropics");
+                        TextView textElement = (TextView) findViewById(R.id.textView5);
+                        textElement.setText("Do you feel this warm wind ? Oh and it's not the the waves wich touch your toes ? Have a break, your mind are under the tropics");
+                        break;
+                    case 2:
+                        ImageView beach2 = (ImageView) findViewById(R.id.picture);
+                        beach2.setImageResource(R.drawable.beach2);
 
+                        TextView textElement2 = (TextView) findViewById(R.id.textView5);
+                        textElement2.setText("Do you feel this warm wind ? Oh and it's not the the waves wich touch your toes ? Have a break, your mind are under the tropics");
+                        break;
+
+                    case 3:
+                        ImageView beach3 = (ImageView) findViewById(R.id.picture);
+                        beach3.setImageResource(R.drawable.beach3);
+
+                        TextView textElement3 = (TextView) findViewById(R.id.textView5);
+                        textElement3.setText("Do you feel this warm wind ? Oh and it's not the the waves wich touch your toes ? Have a break, your mind are under the tropics");
+                        break;
+                    case 4:
+                        ImageView beach4 = (ImageView) findViewById(R.id.picture);
+                        beach4.setImageResource(R.drawable.beach4);
+
+                        TextView textElement4 = (TextView) findViewById(R.id.textView5);
+                        textElement4.setText("Do you feel this warm wind ? Oh and it's not the the waves wich touch your toes ? Have a break, your mind are under the tropics");
+                        break;
+                }
                 break;
+
             case "Mountain" :
-                ImageView mountain = (ImageView)findViewById(R.id.picture);
+                ImageView mountain = (ImageView) findViewById(R.id.picture);
                 mountain.setImageResource(R.drawable.mountain);
 
-                TextView textElement1 = (TextView) findViewById(R.id.textView6);
-                textElement1.setText("Pure air, lonelyness in the wild nature ! Nobody to disturb you, or maybe a small groundhog...");
-
+                TextView textElement = (TextView) findViewById(R.id.textView5);
+                textElement.setText("Pure air, lonelyness in the wild nature ! Nobody to disturb you, or maybe a small groundhog...");
                 break;
+
             case "Home" :
 
                 ImageView home = (ImageView)findViewById(R.id.picture);
@@ -65,6 +94,7 @@ public class MainActivity3Activity extends ActionBarActivity {
                 textElement2.setText("It's not the smell of a hot chocolate ? Perfect to appreciate some home made cookies with the noise of the fire in the background.");
 
                 break;
+
             case "Campaign" :
 
                 ImageView campaign = (ImageView)findViewById(R.id.picture);
