@@ -9,9 +9,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Random;
+
 
 public class MainActivity4Activity extends ActionBarActivity {
 
+
+    private static int minRandom = 1;
+    private static int maxRandom = 4;
     String choice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,28 +31,128 @@ public class MainActivity4Activity extends ActionBarActivity {
                 choice = PREFS.getString("music", "Pop");
                 switch (choice) {
                     case "Pop":
-                        Intent i = new Intent(Intent.ACTION_VIEW);
-                        String url = getResources().getString(R.string.pop_music);
-                        i.setData(Uri.parse(url));
-                        startActivity(i);
+                        Random r = new Random();
+                        int value = minRandom + r.nextInt(maxRandom - minRandom);
+                        switch (value) {
+                            case 1:
+                                Intent i = new Intent(Intent.ACTION_VIEW);
+                                String url = getResources().getString(R.string.pop_music);
+                                i.setData(Uri.parse(url));
+                                startActivity(i);
+                                break;
+                            case 2:
+                                Intent i2 = new Intent(Intent.ACTION_VIEW);
+                                String url2 = getResources().getString(R.string.pop_music2);
+                                i2.setData(Uri.parse(url2));
+                                startActivity(i2);
+                                break;
+                            case 3:
+                                Intent i3 = new Intent(Intent.ACTION_VIEW);
+                                String url3 = getResources().getString(R.string.pop_music3);
+                                i3.setData(Uri.parse(url3));
+                                startActivity(i3);
+                                break;
+                            case 4:
+                                Intent i4 = new Intent(Intent.ACTION_VIEW);
+                                String url4 = getResources().getString(R.string.pop_music4);
+                                i4.setData(Uri.parse(url4));
+                                startActivity(i4);
+                                break;
+                        }
+
                         break;
+
                     case "Rock":
-                        Intent j = new Intent(Intent.ACTION_VIEW);
-                        String url2 = getResources().getString(R.string.rock_music);
-                        j.setData(Uri.parse(url2));
-                        startActivity(j);
+                        Random r2 = new Random();
+                        int value2 = minRandom + r2.nextInt(maxRandom - minRandom);
+                        switch (value2) {
+                            case 1:
+                                Intent i = new Intent(Intent.ACTION_VIEW);
+                                String url = getResources().getString(R.string.rock_music);
+                                i.setData(Uri.parse(url));
+                                startActivity(i);
+                                break;
+                            case 2:
+                                Intent i2 = new Intent(Intent.ACTION_VIEW);
+                                String url2 = getResources().getString(R.string.rock_music2);
+                                i2.setData(Uri.parse(url2));
+                                startActivity(i2);
+                                break;
+                            case 3:
+                                Intent i3 = new Intent(Intent.ACTION_VIEW);
+                                String url3 = getResources().getString(R.string.rock_music3);
+                                i3.setData(Uri.parse(url3));
+                                startActivity(i3);
+                                break;
+                            case 4:
+                                Intent i4 = new Intent(Intent.ACTION_VIEW);
+                                String url4 = getResources().getString(R.string.rock_music4);
+                                i4.setData(Uri.parse(url4));
+                                startActivity(i4);
+                                break;
+                        }
                         break;
+
                     case "Rap":
-                        Intent k = new Intent(Intent.ACTION_VIEW);
-                        String url3 = getResources().getString(R.string.rap_music);
-                        k.setData(Uri.parse(url3));
-                        startActivity(k);
+                        Random r3 = new Random();
+                        int value3 = minRandom + r3.nextInt(maxRandom - minRandom);
+                        switch (value3) {
+                            case 1:
+                                Intent i = new Intent(Intent.ACTION_VIEW);
+                                String url = getResources().getString(R.string.rap_music);
+                                i.setData(Uri.parse(url));
+                                startActivity(i);
+                                break;
+                            case 2:
+                                Intent i2 = new Intent(Intent.ACTION_VIEW);
+                                String url2 = getResources().getString(R.string.rap_music2);
+                                i2.setData(Uri.parse(url2));
+                                startActivity(i2);
+                                break;
+                            case 3:
+                                Intent i3 = new Intent(Intent.ACTION_VIEW);
+                                String url3 = getResources().getString(R.string.rap_music3);
+                                i3.setData(Uri.parse(url3));
+                                startActivity(i3);
+                                break;
+                            case 4:
+                                Intent i4 = new Intent(Intent.ACTION_VIEW);
+                                String url4 = getResources().getString(R.string.rap_music4);
+                                i4.setData(Uri.parse(url4));
+                                startActivity(i4);
+                                break;
+                        }
                         break;
+
                     case "Electro":
-                        Intent l = new Intent(Intent.ACTION_VIEW);
-                        String url4 = getResources().getString(R.string.electro_music);
-                        l.setData(Uri.parse(url4));
-                        startActivity(l);
+                        Random r4 = new Random();
+                        int value4 = minRandom + r4.nextInt(maxRandom - minRandom);
+                        switch (value4) {
+                            case 1:
+                                Intent i = new Intent(Intent.ACTION_VIEW);
+                                String url = getResources().getString(R.string.electro_music);
+                                i.setData(Uri.parse(url));
+                                startActivity(i);
+                                break;
+                            case 2:
+                                Intent i2 = new Intent(Intent.ACTION_VIEW);
+                                String url2 = getResources().getString(R.string.electro_music2);
+                                i2.setData(Uri.parse(url2));
+                                startActivity(i2);
+                                break;
+                            case 3:
+                                Intent i3 = new Intent(Intent.ACTION_VIEW);
+                                String url3 = getResources().getString(R.string.electro_music3);
+                                i3.setData(Uri.parse(url3));
+                                startActivity(i3);
+                                break;
+                            case 4:
+                                Intent i4 = new Intent(Intent.ACTION_VIEW);
+                                String url4 = getResources().getString(R.string.electro_music4);
+                                i4.setData(Uri.parse(url4));
+                                startActivity(i4);
+                                break;
+                        }
                         break;
 
                 }
@@ -70,5 +175,4 @@ public class MainActivity4Activity extends ActionBarActivity {
 
 
 }
-
 
