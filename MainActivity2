@@ -8,9 +8,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 
 public class MainActivity2Activity extends ActionBarActivity {
@@ -19,8 +19,10 @@ public class MainActivity2Activity extends ActionBarActivity {
     private static final String Travel = "travel";
     private static final String Music = "music";
     private static final String Food = "food";
+    private static final String Name ="name";
     private RadioButton radioButton;
     String travel, music, food;
+    EditText userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,11 +55,15 @@ public class MainActivity2Activity extends ActionBarActivity {
                 radioButton = (RadioButton) findViewById(selectedId3);
                 food = radioButton.getText().toString();
 
+                userName = (EditText)findViewById(R.id.editTextName);
+                String name = userName.getText().toString();
+
                 SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity2Activity.this);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString(Travel, travel);
                 editor.putString(Music, music);
                 editor.putString(Food, food);
+                editor.putString(Name, name);
                 editor.commit();
 
                 startActivity(activity3);
