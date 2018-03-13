@@ -1,0 +1,20 @@
+<resources>
+
+    <style name="HappyMoodTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/light_pink</item>
+    </style>
+
+    <style name="text_blue">
+        <item name="android:textColor">@color/light_blue</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="text_pink">
+        <item name="android:textColor">@color/soft_pink</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+
+
+</resources>
