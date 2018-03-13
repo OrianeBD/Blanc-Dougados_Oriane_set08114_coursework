@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.Random;
 
@@ -17,11 +18,16 @@ public class MainActivity4Activity extends ActionBarActivity {
 
     private static int minRandom = 1;
     private static int maxRandom = 4;
-    String choice;
+    String choice, joke;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity4);
+
+        final TextView textView = (TextView)findViewById(R.id.textView12);
+        SharedPreferences PREFS = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        joke = "What about a wee joke " + PREFS.getString("name","User") + " ?";
+        textView.setText(joke);
 
         Button click = (Button) findViewById(R.id.button6);
         click.setOnClickListener(new View.OnClickListener() {
