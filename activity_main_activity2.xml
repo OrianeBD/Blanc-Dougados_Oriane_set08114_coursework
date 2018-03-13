@@ -1,0 +1,179 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="uk.ac.napier.orianebd.happymood.MainActivity2Activity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/info"
+        android:id="@+id/textView4"
+        style="@style/text_pink"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/user_name"
+        android:ems="15"
+        android:id="@+id/editTextName"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:checkedButton="@+id/rbMountain"
+            android:id="@+id/rgTravel">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mountain"
+                android:id="@+id/rbMountain"
+                android:layout_marginTop="40dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beach"
+                android:id="@+id/rbBeach"
+                android:layout_marginTop="30dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/campaign"
+                android:id="@+id/rbCampaign"
+                android:layout_marginTop="30dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:id="@+id/rbHome"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:text="@string/travel"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"/>
+
+        </RadioGroup>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:checkedButton="@+id/rbPop"
+            android:id="@+id/rgMusic">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop"
+                android:id="@+id/rbPop"
+                android:layout_marginTop="40dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rock"
+                android:id="@+id/rbRock"
+                android:layout_marginTop="30dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rap"
+                android:id="@+id/rbRap"
+                android:layout_marginTop="30dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/electro"
+                android:id="@+id/rbElectro"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:text="@string/music"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/checkButton"
+                android:id="@+id/btnOk"/>
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:checkedButton="@+id/rbChinese"
+            android:id="@+id/rgFood">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chinese"
+                android:id="@+id/rbChinese"
+                android:layout_marginTop="40dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/italian"
+                android:id="@+id/rbItalian"
+                android:layout_marginTop="30dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/french"
+                android:id="@+id/rbFrench"
+                android:layout_marginTop="30dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/american"
+                android:id="@+id/rbAmerican"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:text="@string/food"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"/>
+
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>
